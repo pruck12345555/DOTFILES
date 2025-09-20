@@ -1,0 +1,35 @@
+(defwindow time-window
+	:monitor 0
+	:geometry (geometry :x "0%"
+					:y "0.3%"
+					:width "10%"
+					:height "8px"
+					:anchor "top right")
+	:stacking "fg"
+	:reserve (struts :distance "30px" :side "top")
+	:windowtype "dock"
+	:wm-ignore false
+	time)
+
+(defwidget greeter [?text name]
+	(box :orientation "horizontal"
+		:halign "center"
+		text
+		(button :onclick "notify-send 'Hello' 'Hello, ${name}'"
+			"Greet")))
+
+(defwidget labeled-container [name]
+	(box :class "container"
+		name
+		(children)))
+
+(defvar foo "initial value")
+
+(defvar time-visible false)
+
+(defpoll time :interval "60s"
+	:initial "initial-value"
+	:run-while time-visible
+	`date '+%d/%m/%Y %H:%M'`)
+
+

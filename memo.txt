@@ -1,0 +1,7 @@
+ly - desktop environment manager
+yay - package manager for AUR (unofficial packages)
+sway - window manager (tile)
+hyprland - window manager (tile)
+kitty - terminal
+fonts's path - /usr/share/fonts , /home/chika/.local/share/fonts
+scp -P 23522 6610406057@sukreep.cs.sci.ku.ac.th:/home/6610406057/6610406057_Lab08.tar ./Works/
