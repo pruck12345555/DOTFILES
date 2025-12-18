@@ -1,0 +1,56 @@
+(defwindow bb
+												:monitor 0
+												:geometry (geometry :x "1%"
+																																:y "0px"
+																																:width "100%"
+																																:height "20px"
+																																:anchor "top center")
+												:stacking "fg"
+												:reserve (struts :distance "0px" :side "top")
+												:windowtype "dock"
+												:wm-ignore false
+		(scale :min 0
+												   :max 101
+															:active true
+															:value {EWW_BATTERY["BAT0"].capacity}
+															:onchange "")
+
+
+
+)
+
+(defwindow soundWindow
+												:monitor 0
+												:geometry (geometry :x "50px"
+																																:y "21px"
+																																:width "80px"
+																																:height "50px"
+																																:anchor "top right"
+																																)
+												:stacking "fg"
+												:wm-ignore false
+ "WHAT"
+)
+
+(defwidget sound []
+			(box :class "sound" :width 50 :space-evenly false :halign "end" 
+								(button :class "soundButton" :onclick {soundState ? "eww update soundState=false" : "eww update soundState=true"} "") 
+								soundState
+				))
+
+(defwidget soundSlider []
+				(box 
+								(scale :class "soundSlider" :value 50 :marks "Mark" :min 0 :max 100 :onchange "" :value-pos "left" "TEST")
+				))
+
+(defwidget things []
+				(box :halign "end"
+					(soundSlider)
+				)
+)
+
+(defvar soundState false)
+(defpoll volumePoll :interval "1s"
+																:initial "initial-value"
+`wpctl get-volume @DEFAULT_AUDIO_SINK@ | cut -d' ' -f2`)
+

@@ -1,0 +1,192 @@
+*{
+  all: unset;
+}
+
+.top-window{
+  background-color: black;
+  font-family: "Monocraft";
+  color: #00ffff;
+  font-size: 20;
+}
+
+.workspaces{
+  font-family: "Monocraft";
+  font-size: 20;
+  text-shadow: 1px 1px #e2b13c;
+}
+
+.workspacesWiki{
+  padding-left: 5;
+}
+
+.workspace-entry-current-occupied{
+  color: cyan;
+}
+
+.workspace-entry-current-empty{
+  color: cyan;
+}
+
+.workspace-entry--empty{
+  color: white;
+}
+
+.workspace-entry--occupied{
+  color: red;
+}
+
+.archMenu{
+  font-family: "Monocraft";
+  font-size: 20;
+}
+
+.powerMenu{
+  font-family: "Monocraft";
+  font-size: 20;
+}
+
+.soundMenu{
+  background-color: green;
+}
+
+
+.time{
+  font-size: 30;
+  background-color: green;
+}
+
+.battery{
+  font-size: 30;
+  background-color: red;
+}
+
+.container{
+  background-color: transparent;
+}
+
+.shutdown{
+  background-color: blue;
+}
+
+.shutdown:hover{
+  color: black;
+}
+
+.reboot{
+  background-color: white;
+}
+
+.reboot:hover{
+  color: black;
+}
+
+.wallpaper:hover{
+  color: yellow;
+}
+
+.sidestuff slider {
+  all: unset;
+  color: #ffd5cd;
+}
+
+.metric scale trough highlight {
+  all: unset;
+  background-color: #D35D6E;
+  color: #000000;
+  border-radius: 10px;
+}
+
+.metric scale trough {
+  all: unset;
+  background-color: #4e4e4e;
+  border-radius: 50px;
+  min-height: 3px;
+  min-width: 50px;
+  margin-left: 10px;
+  margin-right: 20px;
+}
+
+.event1{
+  background-color: green;
+
+}
+
+.appListBox{
+  border-style: solid;
+  border-color: white;
+  border-width: 2px;
+}
+
+.appEventBox{
+  color: white;  
+  background-color: rgba(0,0,0,0.5);
+  border-color: white;
+  border-style: solid;
+  border-bottom-width: 2px;
+}
+
+.appEventBoxLast{
+  color: white;  
+  background-color: rgba(0,0,0,0.5);
+  border-color: white;
+  border-style: solid;
+}
+
+.appBox{
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+}
+
+.appEventBox:hover{
+  background-color: blue;
+}
+
+.appEventBoxLast:hover{
+  background-color: blue;
+}
+
+.appBoxLast{
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+}
+
+.tools{
+  padding-right: 20px;
+}
+
+.powerListBox{
+  border-style: solid;
+  border-color: white;
+  border-width: 2px;
+}
+
+.powerBox{
+  color: white;  
+  background-color: rgba(0,0,0,0.5);
+  border-color: white;
+  border-style: solid;
+  border-top-width: 2px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.powerBox:hover{
+  background-color: blue;
+}
+
+.powerBoxFirst{
+  color: white;  
+  background-color: rgba(0,0,0,0.5);
+  border-color: white;
+  border-style: solid;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.powerBoxFirst:hover{
+  background-color: blue;
+}

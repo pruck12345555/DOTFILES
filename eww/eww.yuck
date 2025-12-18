@@ -1,35 +1,77 @@
-(defwindow time-window
-	:monitor 0
-	:geometry (geometry :x "0%"
-					:y "0.3%"
-					:width "10%"
-					:height "8px"
-					:anchor "top right")
-	:stacking "fg"
-	:reserve (struts :distance "30px" :side "top")
-	:windowtype "dock"
-	:wm-ignore false
-	time)
+(include "./bar.yuck")
+(include "./buttonPopup.yuck")
+(include "./lol.yuck")
+(defwindow top-window
+												:monitor 0
+												:geometry (geometry :x "1%"
+																																:y "0px"
+																																:width "100%"
+																																:height "20px"
+																																:anchor "top center")
+												:stacking "fg"
+												:reserve (struts :distance "0px" :side "top")
+												:windowtype "dock"
+												:wm-ignore false
+ (labeled-container
+	(battime)
+	(button :class "shutdown" :width 100 :onclick "systemctl poweroff" "SHUT DOWN")
+	(button :class "reboot" :onclick "systemctl reboot" "REBOOT")
+	(button :class "wallpaper" :onclick {wallState == 0 ? "eww update wallState=1 && notify-send 1 && 
+																																																								hyprctl hyprpaper reload ,'~/Pictures/animegirl_beach_tux.png'" :
+																																																							"eww update wallState=0 && notify-send 0 &&
+																																																								hyprctl hyprpaper reload ,'~/Pictures/calamitasRain.png'"}
+																																																						"WALLPAPER")
+	))
 
-(defwidget greeter [?text name]
-	(box :orientation "horizontal"
-		:halign "center"
-		text
-		(button :onclick "notify-send 'Hello' 'Hello, ${name}'"
-			"Greet")))
+	(defwindow image-window
+												:monitor 0
+												:geometry (geometry :x "20px"
+																																:y "50px"
+																																:width "0%"
+																																:height "0%"
+																																:anchor "top right")
+												:stacking "fg"
+												:windowtype "dock"
+												:wm-ignore false
+(image :path "/home/pruck/Pictures/kitayamachu01.png" :image-width: 200 :image-height 200))
 
-(defwidget labeled-container [name]
-	(box :class "container"
-		name
-		(children)))
+(defwindow image-window2
+												:monitor 0
+												:geometry (geometry :x "20px"
+																																:y "50px"
+																																:width "0%"
+																																:height "0%"
+																																:anchor "top left")
+												:stacking "fg"
+												:windowtype "dock"
+												:wm-ignore false
+(image :path "/home/pruck/Pictures/kitayamachuBlackDress.png" :image-width: 300 :image-height 300))
 
-(defvar foo "initial value")
+(defwidget labeled-container []
+				(box :class "container" :orientation "h" :space-evenly true 
+								(children)))
 
-(defvar time-visible false)
+(defwidget battery [id]
+				(box :class "battery" :orientation "h" :space-evenly true 
+				"BAT : ${EWW_BATTERY[id].capacity}"
+				))
 
-(defpoll time :interval "60s"
-	:initial "initial-value"
-	:run-while time-visible
-	`date '+%d/%m/%Y %H:%M'`)
+(defwidget time []
+				(box :class "time" :orientation "h" :space-evenly true 
+				"TIME : ${timePoll}"))
+
+(defwidget battime []
+				(box :class "battime" :orientation "h" :space-evenly true
+				(battery :id "BAT0")
+				(time)
+				))
+
+(defpoll timePoll :interval "1s"
+																:initial "initial-value"
+`date +%H:%M`)
+
+(defvar wallState 0)
+
+
 
 
