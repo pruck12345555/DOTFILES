@@ -12,7 +12,15 @@
 .workspaces{
   font-family: "Monocraft";
   font-size: 20;
-  text-shadow: 1px 1px #e2b13c;
+  text-shadow: 2px 2px #ff3683;
+}
+
+.archLogo{
+  font-size: 25;
+  padding-left: 3;
+  padding-top: 2;
+  color: red;
+  text-shadow: 0px 0px #e30000;
 }
 
 .workspacesWiki{
@@ -20,11 +28,11 @@
 }
 
 .workspace-entry-current-occupied{
-  color: cyan;
+  color: #9D00FF;
 }
 
 .workspace-entry-current-empty{
-  color: cyan;
+  color: #ae1fff;
 }
 
 .workspace-entry--empty{

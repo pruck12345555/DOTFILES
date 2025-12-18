@@ -5,39 +5,39 @@
                                :width "100%"
                                :height "30px"
                                :anchor "top center")
-											:exclusive "false"
-											:focusable "none"
-											:stacking "fg"
+							   :exclusive "false"
+							   :focusable "none"
+							   :stacking "fg"
 				(box
-								(workspacesWiki)
-								(tools)
+					(workspacesWiki)
+					(tools)
 				)
 )
 
 (defwindow archMenu
-												:monitor 0
-												:geometry (geometry :x "0%"
-																						:y "40px"
-																						:width "10%"
-																						:height "0px"
-																						:anchor "top left")
-												:exclusive "false"
-												:focusable "none"
-												:stacking "fg"
-				(appList)
+			:monitor 0
+			:geometry (geometry :x "0%"
+								:y "40px"
+								:width "10%"
+								:height "0px"
+								:anchor "top left")
+								:exclusive "false"
+								:focusable "none"
+								:stacking "fg"
+	(appList)
 )
 
 (defwindow powerMenu
-												:monitor 0
-												:geometry (geometry :x "0%"
-												:y "40px"
-												:width "10%"
-												:height "0px"
-												:anchor "top right")
-												:exclusive "false"
-												:focusable "none"
-												:stacking "fg"
-				(powerList)
+			:monitor 0
+			:geometry (geometry :x "0%"
+								:y "40px"
+								:width "10%"
+								:height "0px"
+								:anchor "top right")
+								:exclusive "false"
+								:focusable "none"
+								:stacking "fg"
+	(powerList)
 )
 
 (defwindow soundMenu
@@ -60,38 +60,38 @@
 (defvar soundListActive false)
 
 (defwidget appList []
-				(box :visible appListActive :halign "start" :width 200
-				(scroll :height 100 
-				(eventbox :onhoverlost "eww update appListActive=false"
-				(box :orientation "v" :halign "start" :class "appListBox" 
-								(eventbox :cursor "pointer" :onclick "eww update appListActive=false && brave&" :class "appEventBox"
-									(box :orientation "h" :space-evenly false :spacing 10 :class "appBox"
-										(image :path "/home/pruck/Pictures/braveLogo.png" :image-width 30 :image-height 30)
-										(label :text "Brave")))
-								(eventbox :cursor "pointer" :onclick "eww update appListActive=false && kitty nvim ~&" :class "nvim" :class "appEventBox"
-									(box :orientation "h" :space-evenly false :spacing 10  :class "appBox"
-										(image :path "/home/pruck/Pictures/neovimLogo.png" :image-width 30 :image-height 30)
-										(label :text "Neovim")))
-								(eventbox :cursor "pointer" :onclick "eww update appListActive=false && code" :class "appEventBox"
-									(box :orientation "h" :space-evenly false :spacing 10 :class "appBox"
-										(image :path "/home/pruck/Pictures/vscodeLogo.png" :image-width 30 :image-height 30)
-										(label :text "VS Code")))
-								(eventbox :cursor "pointer" :onclick "eww update appListActive=false && kitty nvim /home/pruck/.config&" :class "appEventBox"
-									(box :orientation "h" :space-evenly false :spacing 10 :class "appBox" 
-										(image :path "/home/pruck/Pictures/wrenchLogo.png" :image-width 30 :image-height 30)
-										(label :text "configs")))
-								(eventbox :cursor "pointer" :onclick "eww update appListActive=false && nautilus&" :class "appEventBox"
-									(box :orientation "h" :space-evenly false :spacing 10 :class "appBox"
-										(image :path "/home/pruck/Pictures/folderLogo.png" :image-width 30 :image-height 30)
-										(label :text "Files")))
-								(eventbox :cursor "pointer" :onclick "eww update appListActive=false && discord&" :class "appEventBox"
-									(box :orientation "h" :space-evenly false :spacing 10 :class "appBox"
-										(image :path "/home/pruck/Pictures/discordLogo.png" :image-width 30 :image-height 30)
-										(label :text "Discord")))
-								(eventbox :cursor "pointer" :onclick "eww update appListActive=false && wofi --show drun&" :class "appEventBoxLast"
-									(box :orientation "h" :space-evenly false :spacing 10 :class "appBox" 
-										(image :path "/home/pruck/Pictures/searchLogo.png" :image-width 30 :image-height 30)
-										(label :text "Finder")))
+			(box :visible appListActive :halign "start" :width 200
+			(scroll :height 100 
+			(eventbox :onhoverlost "eww update appListActive=false"
+			(box :orientation "v" :halign "start" :class "appListBox" 
+				(eventbox :cursor "pointer" :onclick "eww update appListActive=false && brave&" :class "appEventBox"
+						(box :orientation "h" :space-evenly false :spacing 10 :class "appBox"
+							(image :path "/home/pruck/Pictures/braveLogo.png" :image-width 30 :image-height 30)
+									(label :text "Brave")))
+				(eventbox :cursor "pointer" :onclick "eww update appListActive=false && kitty nvim ~&" :class "nvim" :class "appEventBox"
+						(box :orientation "h" :space-evenly false :spacing 10  :class "appBox"
+							(image :path "/home/pruck/Pictures/neovimLogo.png" :image-width 30 :image-height 30)
+									(label :text "Neovim")))
+				(eventbox :cursor "pointer" :onclick "eww update appListActive=false && code" :class "appEventBox"
+						(box :orientation "h" :space-evenly false :spacing 10 :class "appBox"
+							(image :path "/home/pruck/Pictures/vscodeLogo.png" :image-width 30 :image-height 30)
+									(label :text "VS Code")))
+				(eventbox :cursor "pointer" :onclick "eww update appListActive=false && kitty nvim /home/pruck/.config&" :class "appEventBox"
+						(box :orientation "h" :space-evenly false :spacing 10 :class "appBox" 
+							(image :path "/home/pruck/Pictures/wrenchLogo.png" :image-width 30 :image-height 30)
+									(label :text "configs")))
+				(eventbox :cursor "pointer" :onclick "eww update appListActive=false && nautilus&" :class "appEventBox"
+						(box :orientation "h" :space-evenly false :spacing 10 :class "appBox"
+							(image :path "/home/pruck/Pictures/folderLogo.png" :image-width 30 :image-height 30)
+									(label :text "Files")))
+				(eventbox :cursor "pointer" :onclick "eww update appListActive=false && discord&" :class "appEventBox"
+						(box :orientation "h" :space-evenly false :spacing 10 :class "appBox"
+							(image :path "/home/pruck/Pictures/discordLogo.png" :image-width 30 :image-height 30)
+									(label :text "Discord")))
+				(eventbox :cursor "pointer" :onclick "eww update appListActive=false && wofi --show drun&" :class "appEventBoxLast"
+						(box :orientation "h" :space-evenly false :spacing 10 :class "appBox" 
+							(image :path "/home/pruck/Pictures/searchLogo.png" :image-width 30 :image-height 30)
+									(label :text "Finder")))
 				))))
 )
 
@@ -100,28 +100,28 @@
 
 (defwidget workspacesWiki []
 				(eventbox :class "workspaces-widget" 
-								(box :halign "start" :spacing 5 :class "workspacesWiki"
-								(eventbox :cursor "pointer" :onclick "eww update appListActive=${!appListActive}"
-												(image :path "/home/pruck/Pictures/archLogoWhite.png" :image-width 25 :image-height 25)
-								)
-									(label :text "${workspacesWiki}${current_workspace}" :visible false)
-									(for workspace in workspacesWiki
-									(eventbox :onclick "hyprctl dispatch workspace ${workspace.id}" :cursor "pointer" :onrightclick "hyprctl dispatch movetoworkspace ${workspace.id}"
-									(box :width 10 :class "workspace-entry-${workspace.id == current_workspace ? "current" : ""}-${workspace.windows > 0 ? "occupied" : "empty"}"
-									(label :text "${workspace.id}"))))))
+					(box :halign "start" :spacing 5 :class "workspacesWiki"
+						(eventbox :cursor "pointer" :onclick "eww update appListActive=${!appListActive}"
+							(label :text "󰣇" :class "archLogo")	
+							)
+						(label :text "${workspacesWiki}${current_workspace}" :visible false)
+							(for workspace in workspacesWiki
+						(eventbox :onclick "hyprctl dispatch workspace ${workspace.id}" :cursor "pointer" :onrightclick "hyprctl dispatch movetoworkspace ${workspace.id}"
+					(box :width 10 :class "workspace-entry-${workspace.id == current_workspace ? "current" : ""}-${workspace.windows > 0 ? "occupied" : "empty"}"
+						(label :text "${workspace.id}"))))))
 )
 
 (defpoll datePoll :interval "1s"
-																:initial "sadsad;;p-value"
+		     	  :initial "sadsad;;p-value"
 `date +'%H:%M %d/%m/%Y'`)
  
 
 (defwidget tools []
 				(box :halign "end" :spacing 10 :space-evenly false :class "tools"
-								"${datePoll}"
-								(eventbox :cursor "pointer" "")
-								"${EWW_BATTERY["BAT0"].capacity}%"
-								(eventbox :cursor "pointer" :onclick "eww update powerListActive=${!powerListActive}" "󰐥")
+					"${datePoll}"
+					(eventbox :cursor "pointer" "")
+					"${EWW_BATTERY["BAT0"].capacity}%"
+					(eventbox :cursor "pointer" :onclick "eww update powerListActive=${!powerListActive}" "󰐥")
 				)
 )
 
@@ -130,11 +130,11 @@
 				(scroll :height 100 
 				(eventbox :onhoverlost "eww update powerListActive=false"
 				(box :orientation "v" :class "powerListBox" 
-								(eventbox :cursor "pointer" :onclick "systemctl poweroff" :class "powerBoxFirst"
-										(label :text "Shut down"))
-								(eventbox :cursor "pointer" :onclick "systemctl reboot" :class "powerBox"
-										(label :text "Reboot"))
-								(eventbox :cursor "pointer" :onclick "hyprlock&" :class "powerBox"
-										(label :text "Lock"))
+					(eventbox :cursor "pointer" :onclick "systemctl poweroff" :class "powerBoxFirst"
+							(label :text "Shut down"))
+					(eventbox :cursor "pointer" :onclick "systemctl reboot" :class "powerBox"
+							(label :text "Reboot"))
+					(eventbox :cursor "pointer" :onclick "hyprlock&" :class "powerBox"
+							(label :text "Lock"))
 				))))
 )
