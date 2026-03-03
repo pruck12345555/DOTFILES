@@ -13,7 +13,6 @@ XDG_CONFIG_HOME='~/.config/'
 HYPRLAND_CONFIG='/home/chika/config/hypr/'
 KITTY_CONFIG='/home/chika/config/kitty/'
 EWW_CONFIG='/home/chika/config/eww/'
-SUKREEP='-p 23522 6610406057@sukreep.cs.sci.ku.ac.th'
 export PATH="/home/chika/anaconda3/bin:$PATH"
 export PATH="/opt/cuda/bin:$PATH"
 
