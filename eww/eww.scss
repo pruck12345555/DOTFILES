@@ -3,7 +3,6 @@
 }
 
 .top-window{
-  background-color: black;
   font-family: "Monocraft";
   color: #00ffff;
   font-size: 20;
@@ -12,7 +11,110 @@
 .workspaces{
   font-family: "Monocraft";
   font-size: 20;
-  text-shadow: 1px 1px #e2b13c;
+  background-color: rgba(0, 0, 0, 0.2);
+  text-shadow: 2px 2px #ff3683;
+}
+
+.mainMenu{
+  background-color: rgba(255, 105, 180, 0.7);
+  border-radius: 2%;
+  border-color: magenta;
+  border-width: 1px;
+  border-style: solid;
+  font-family: "Monocraft";
+  padding: 5px 5px 5px 5px;
+}
+
+.mainMenu label{
+  text-shadow: 2px 2px #ff3683;
+}
+
+.ramDisk{
+  padding-right: 5px;
+}
+
+.ramDisk label{
+  padding-left: 10px;
+  font-size: 20px;
+}
+
+.ramDisk trough{
+  color: black;
+  background-color: white;
+  border-radius: 10px;
+  min-width: 420px;
+  min-height: 10px;
+  margin-left: 8px;
+}
+
+.ramDisk highlight{
+  background-color: lime;
+  border-radius: 10px;
+  min-width: 0px;
+  min-height: 10px;
+}
+
+.profilePic{
+  background-image: url('/home/pruck/Pictures/catPink.jpg');
+  margin-left: 5px;
+  margin-right: 5px;
+  background-size: cover;
+  border-radius: 50%;
+  border-color: pink;
+  border-style: solid;
+  border-width: 3px;;
+}
+
+.lol1 label{
+  font-size: 25px;
+  margin-top: 8px;
+  margin-left: 20px;
+}
+
+.lol1 calendar{
+  font-family: "JetBrains Mono";
+  font-size: 25px;
+  background-color: pink;
+  border: 1px solid black;
+  border-radius: 5px;
+  color: black;
+}
+
+.lol1 calendar:selected{
+  color: blue;
+}
+
+.lol1 calendar.header{
+  color: magenta;
+  min-width: 50px
+}
+
+.lol1 calendar.highlight{
+  color: red;
+}
+
+.lol1 calendar.button{
+  color: red;
+}
+
+.lol1 calendar.button:hover{
+  color: green;
+}
+
+.lol1 calendar:indeterminate{
+  color: grey;
+}
+
+.lol1{
+  font-size: 25;
+}
+
+.archLogo{
+  font-size: 21;
+  padding-left: 3;
+  padding-top: 1.9;
+  color: #ffb5f6;
+  text-shadow: 0px 0px #bffffe;
 }
 
 .workspacesWiki{
@@ -20,11 +122,13 @@
 }
 
 .workspace-entry-current-occupied{
-  color: cyan;
+  background-color: pink;
+  border-radius: 20%;
 }
 
 .workspace-entry-current-empty{
-  color: cyan;
+  background-color: pink;
+  border-radius: 20%;
 }
 
 .workspace-entry--empty{
@@ -32,7 +136,7 @@
 }
 
 .workspace-entry--occupied{
-  color: red;
+  color: #d9001d;
 }
 
 .archMenu{
@@ -45,65 +149,66 @@
   font-size: 20;
 }
 
-.soundMenu{
-  background-color: green;
+
+.sound{
+  background-color: rgba(0, 0, 0, 0.5);
+  border-style: solid;
+  border-color: pink;
+  border-width: 2px;
+  padding-left: 12px;
 }
 
-
-.time{
-  font-size: 30;
-  background-color: green;
+.sound label{
+  font-family: "Monocraft";
 }
 
-.battery{
-  font-size: 30;
-  background-color: red;
+.soundText{
+  font-size: 20px;
 }
 
-.container{
-  background-color: transparent;
+.volumeLogo{
+  font-size: 20px;
+  margin-right: 2px;
+  color:pink;
 }
 
-.shutdown{
-  background-color: blue;
+.brightnessLogo{
+  color: pink;
+  font-size: 17px;
 }
 
-.shutdown:hover{
-  color: black;
-}
-
-.reboot{
-  background-color: white;
-}
-
-.reboot:hover{
-  color: black;
-}
-
-.wallpaper:hover{
-  color: yellow;
-}
-
-.sidestuff slider {
-  all: unset;
-  color: #ffd5cd;
-}
-
-.metric scale trough highlight {
-  all: unset;
-  background-color: #D35D6E;
-  color: #000000;
+.sound highlight{
+  background-color: pink;
   border-radius: 10px;
+  min-width: 0px;
+  min-height: 10px;
 }
 
-.metric scale trough {
-  all: unset;
-  background-color: #4e4e4e;
-  border-radius: 50px;
-  min-height: 3px;
+.sound value{
+  padding-left: 3px;
+  font-family: "Monocraft";
+  color: white;
+}
+
+.sound trough{
+  color: black;
+  background-color: white;
+  border-radius: 10px;
   min-width: 50px;
-  margin-left: 10px;
-  margin-right: 20px;
+  min-height: 10px;
+  margin-left: 20px;
+}
+
+.sound slider{
+  background-color: white;
+  border-radius: 50%;
+  min-width: 15px;
+  min-height: 15px;
+  margin-top: -10px;
+  margin-bottom: -10px;
+  border-style: solid;
+  border-color: black;
+  border-width: 3px;
 }
 
 .event1{
@@ -113,14 +218,14 @@
 
 .appListBox{
   border-style: solid;
-  border-color: white;
+  border-color: pink;
   border-width: 2px;
 }
 
 .appEventBox{
   color: white;  
   background-color: rgba(0,0,0,0.5);
-  border-color: white;
+  border-color: pink;
   border-style: solid;
   border-bottom-width: 2px;
 }
@@ -128,7 +233,7 @@
 .appEventBoxLast{
   color: white;  
   background-color: rgba(0,0,0,0.5);
-  border-color: white;
+  border-color: pink;
   border-style: solid;
 }
 
@@ -140,11 +245,11 @@
 }
 
 .appEventBox:hover{
-  background-color: blue;
+  background-color: #ff0097;
 }
 
 .appEventBoxLast:hover{
-  background-color: blue;
+  background-color: #ff0097;
 }
 
 .appBoxLast{
@@ -160,14 +265,14 @@
 
 .powerListBox{
   border-style: solid;
-  border-color: white;
+  border-color: pink;
   border-width: 2px;
 }
 
 .powerBox{
   color: white;  
   background-color: rgba(0,0,0,0.5);
-  border-color: white;
+  border-color: pink;
   border-style: solid;
   border-top-width: 2px;
   padding-left: 10px;
@@ -175,7 +280,7 @@
 }
 
 .powerBox:hover{
-  background-color: blue;
+  background-color: #ff0097;
 }
 
 .powerBoxFirst{
@@ -188,5 +293,5 @@
 }
 
 .powerBoxFirst:hover{
-  background-color: blue;
+  background-color: #ff0097;
 }

@@ -1,6 +1,6 @@
-# STYLE OPTIONS
-background-color=#000000
+font=PxPlus IBM VGA 9x16 16
 text-color=#ffffff
-font=Monocraft 11
+background-color=#000000
+width=300
+border-color=#00ff1e
 default-timeout=3000
-border-color=#008000

@@ -4,8 +4,8 @@
     "type": "auto",
     "source": "arch_small",
     "color": {
-      "1": "#fdfbd4",
-      "2": "#fdfbd4",
+      "1": "#ff00d9",
+      "2": "#ff00d9",
       "3": "",
       "4": "",
       "5": "",
@@ -38,10 +38,10 @@
     "hideCursor": false,
     "separator": ": ",
     "color": {
-      "keys": "#facf43",
-      "title": "#f7c319",
+      "keys": "#e30097",
+      "title": "#e30097",
       "output": "#fffee0",
-      "separator": "#f1d3b2"
+      "separator": "#f233d2"
     },
     "brightColor": true,
     "duration": {
@@ -71,7 +71,7 @@
       ],
       "ndigits": 0,
       "color": {
-        "green": "#7df9ff",
+        "green": "#7ff233",
         "yellow": "93",
         "red": "91"
       },
@@ -126,7 +126,7 @@
       "fqdn": false,
       "color": {
         "user": "",
-        "at": "#e4c787",
+        "at": "#f233d2",
         "host": ""
       }
     },
@@ -193,16 +193,6 @@
         "yellow": 80,
         "type": 0
       }
-    },
-    {
-      "type": "swap",
-      "percent": {
-        "green": 50,
-        "yellow": 80,
-        "type": 0
-      },
-      "keyIcon": "󰓡",
-      "separate": false
     },
     {
       "type": "disk",

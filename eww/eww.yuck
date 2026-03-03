@@ -1,4 +1,3 @@
-(include "./bar.yuck")
 (include "./buttonPopup.yuck")
 (include "./lol.yuck")
 (defwindow top-window
