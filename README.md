@@ -1,1 +1,1 @@
-![SHOWCASE VIDEO](archRiceShowcase.gif)
+![SHOWCASE VIDEO](archRiceShowcase.mp4)
